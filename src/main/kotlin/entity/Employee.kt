@@ -6,5 +6,5 @@ object Employees: Table(){
     val id = integer("id").primaryKey()
     val name = varchar("name", 50)
     val age = integer("age")
-    val company = (integer("company") references Companies.id)
+    val company = reference("company", Companies)
 }

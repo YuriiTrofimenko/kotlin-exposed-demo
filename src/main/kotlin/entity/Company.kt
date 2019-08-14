@@ -1,9 +1,9 @@
 package entity
 
+import org.jetbrains.exposed.dao.IntIdTable
 import org.jetbrains.exposed.sql.*
 
-object Companies: Table(){
-    val id = integer("id").primaryKey()
+object Companies: IntIdTable(){
     val name = varchar("name", 50)
     val city = varchar("city", 25)
 }
